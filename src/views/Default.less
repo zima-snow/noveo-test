@@ -1,0 +1,55 @@
+@noveo-color: #da4225;
+@noveo-text-color: #131e7c;
+@noveo-light-color: #f7af56;
+@black-color: #000;
+@white-color: #fff;
+@error-color: #E4554F;
+@success-color: #05A054;
+@light-grey-color: #f8f8f8;
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: @light-grey-color;
+}
+
+h1 {
+  text-align: center;
+}
+
+.noveo__main-block {
+  margin-top: 1%;
+  padding: 1%;
+  background-color: @white-color;
+  border: 1px solid @white-color;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.setSuccessErrorBlock(@color) {
+  position: absolute;
+  top: 85%;
+  padding: 1%;
+  background-color: @color;
+  font-size: 24px;
+  font-weight: 600;
+  border: 2px solid @color;
+  border-radius: 25px;
+}
+
+.noveo__error-block {
+  .setSuccessErrorBlock(@error-color);
+}
+
+.noveo__success-block {
+  .setSuccessErrorBlock(@success-color);
+}
+
+.noveo__button {
+  color: @noveo-text-color;
+  border: 1px solid @black-color;
+  border-radius: 10px;
+  &:hover {
+    background-color: @noveo-light-color;
+  }
+}
